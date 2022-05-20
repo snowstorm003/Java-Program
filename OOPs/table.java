@@ -1,3 +1,4 @@
-public class table {
+public class table 
+{
     
 }
