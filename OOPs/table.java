@@ -1,14 +1,13 @@
 import java.util.*;
 public class table 
 {
-    int n, i;
+    int n;
     table()
     {
         n=0;
-        i=0;
     }
 
-    int accept()
+    void accept()
     {
         Scanner sc = new Scanner(System.in);
         
@@ -16,17 +15,17 @@ public class table
         n=sc.nextInt();
 
         sc.close();
-        return n;
     }
 
-    void multiply(int num)
+    void multiply()
     {
-        for(i=1; i<=10; i++)
-            System.out.println(" "+num+"X"+i+"="+(num*i));
+        for(int i=1; i<=10; i++)
+            System.out.println(" "+n+"X"+i+"="+(n*i));
     }
     public static void main(String args[])
     {
         table ob = new table();
-        ob.multiply(ob.accept());
+        ob.accept();
+        ob.multiply();
     }
 }
