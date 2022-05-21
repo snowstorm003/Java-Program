@@ -1,54 +1,68 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class sumbetween 
 {
-    int N, s, i;
+    int m, n, s;
 
     sumbetween() 
     {
-        N = 0;
+        m = 0;
+        n = 0;
         s = 0;
-        i = 0;
     }
 
-    int accept()
+    void accept() 
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print(" Enter number : ");
-        N = sc.nextInt();
+        int i = 1;
+
+        while (i == 1) 
+        {
+            System.out.print(" Enter 1st number : ");
+            m = sc.nextInt();
+            System.out.print(" Enter 2nd number : ");
+            n = sc.nextInt();
+
+            if (Math.abs(m - n) < 2)
+                System.out.println(" Invalid Input!!!!!");
+            else
+                i = 0;
+        }
+
+        if (m > n) 
+        {
+            int temp = m;
+            m = n;
+            n = temp;
+
+        }
 
         sc.close();
-        return N;
 
     }
 
-    int sum(int a, int b)
+    void sum() 
     {
-        a++;
-        for(i=a; i<b; i++)
-        {
-            s=s+i;
-        }
-        return s;
+        m++;
+
+        for (int i = m; i < n; i++)
+            s = s + i;
 
     }
 
-    void print(int result)
+    void print() 
     {
-        System.out.println((" Sum : "+s));
+        System.out.println((" Sum : " + s));
     }
 
     public static void main(String args[]) 
     {
         sumbetween ob = new sumbetween();
-        sumbetween ob1 = new sumbetween();
-        sumbetween ob2 = new sumbetween();
 
-        int a=ob1.accept();
-        int b=ob2.accept();
-
-        ob.print(ob.sum(a,b));
+        ob.accept();
+        ob.sum();
+        ob.print();
 
     }
 }
