@@ -18,10 +18,8 @@ public class Add
     public void addition()
     {
         sum=a;
-        for(int i=a; i<=b; i++)
-        {
+        for(int i=1; i<=b; i++)
             sum++;
-        }
         
     }
     public void print()

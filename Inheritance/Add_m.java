@@ -1,7 +1,6 @@
-
 public class Add_m
 {
-    public static void main()
+    public static void main(String args[])
     {
         Add ob = new Add();
         ob.input();
